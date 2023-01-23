@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Profile card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      .countainer {
+        width: 100%;
+        height: 970px;
+        position: absolute;
+        background-color: rgb(55, 165, 165);
+        overflow: hidden;
+      }
+      .top-img {
+        position: relative;
+        -webkit-transform: rotate(120deg);
+        right: 200px;
+        bottom: 300px;
+      }
+
+      .bottom-img {
+        position: relative;
+        top: -700px;
+        left: 950px;
+        overflow: hidden;
+      }
+
+      .card {
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        background-color: white;
+        border-radius: 30px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      .hero-img {
+        border-radius: 30px 30px 0 0;
+      }
+
+      .img-profile {
+        display: block;
+        position: relative;
+        border-radius: 100%;
+        border: 10px solid white;
+        margin-left: 120px;
+        top: -60px;
+      }
+
+      h1 {
+        display: inline-block;
+        position: relative;
+        margin-left: 110px;
+        top: -65px;
+      }
+
+      h1::after {
+        content: "26";
+        padding-left: 5px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      .victor {
+        font-size: 22px;
+        font-weight: bold;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      .london {
+        display: inline-block;
+        position: relative;
+        font-size: 17px;
+        font-weight: 300;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        margin-left: 110px;
+        top: -64px;
+        left: 40px;
+      }
+
+      hr {
+        position: relative;
+        top: -30px;
+        border-top: 1px solid black;
+      }
+
+      .text {
+        display: flex;
+      }
+
+      h2 {
+        position: relative;
+        font-size: 2rem;
+        top: -40px;
+        left: 10px;
+      }
+
+      .followers {
+        position: relative;
+        right: 43px;
+        bottom: 10px;
+      }
+
+      h3 {
+        position: relative;
+        font-size: 2.3rem;
+        top: -40px;
+        left: 30px;
+      }
+
+      .like {
+        position: relative;
+        right: 30px;
+        bottom: 8px;
+      }
+
+      h4 {
+        position: relative;
+        font-size: 2.3rem;
+        top: -40px;
+        left: 50px;
+      }
+
+      .photos {
+        position: relative;
+        top: -10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="countainer">
+      <img
+        src="images/bg-pattern-top.svg"
+        class="top-img"
+      />
+      <img
+        src="images/bg-pattern-bottom.svg"
+        class="bottom-img"
+      />
+    </div>
+    <div class="card">
+      <img
+        src="images/bg-pattern-card.svg"
+        class="hero-img"
+      />
+      <img
+        src="images/image-victor.jpg"
+        class="img-profile"
+      />
+      <h1><span class="victor">Victor Crest</span></h1>
+      <p class="london">london</p>
+      <hr />
+      <div class="text">
+        <h2>80K</h2>
+        <p class="followers">followers</p>
+        <br />
+        <h3>803K</h3>
+        <p class="like">like</p>
+        <br />
+        <h4>1.4K</h4>
+        <p class="photos">photos</p>
+      </div>
+    </div>
+  </body>
+</html>
